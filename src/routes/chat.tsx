@@ -112,9 +112,9 @@ function ChatPage() {
               ) : (
                 <div
                   key={i}
-                  className="max-w-[78%] self-start rounded-xl rounded-bl-[2px] border border-border bg-surface px-3.5 py-2.5 text-[13.8px] leading-relaxed whitespace-pre-wrap"
+                  className="max-w-[78%] space-y-2 self-start rounded-xl rounded-bl-[2px] border border-border bg-surface px-3.5 py-2.5 text-[13.8px] leading-relaxed [&_li]:ml-4 [&_li]:list-disc [&_ol_li]:list-decimal [&_strong]:font-semibold"
                 >
-                  {message.content}
+                  <ReactMarkdown>{message.content}</ReactMarkdown>
                 </div>
               ),
             )
