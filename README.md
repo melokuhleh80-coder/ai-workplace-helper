@@ -50,6 +50,8 @@ This solution implements 3 of the 5 suggested features:
 - **HTML, CSS, JavaScript** — single-file front end, no build step or framework
 - **Anthropic Claude API** (`claude-sonnet-4-6`, `/v1/messages` endpoint) — powers all three AI features
 - **Google Fonts** — Plus Jakarta Sans, Inter, JetBrains Mono
+- **Lovable** — used to build and publish the live, hosted version of the app
+- **GitHub** — hosts the project's source code and version history
 - **Prompt engineering** — each feature uses a dedicated system prompt:
   - Email Generator: instructed to write only the email itself, adapt tone/audience, and never invent facts not provided by the user
   - Notes Summarizer: instructed to return strict JSON (summary, key points, decisions, action items) so the output can be rendered as structured cards instead of a wall of text, and to mark missing owners/deadlines explicitly rather than guessing
@@ -72,6 +74,8 @@ This app is a single self-contained HTML file (`index.html`) with no server, bui
 4. No API key setup is required in this environment — API calls are pre-authorized
 
 > If hosting this outside the current environment, the `fetch` call in `index.html` targeting `https://api.anthropic.com/v1/messages` would need to be pointed at a backend that attaches a valid Anthropic API key, since keys should never be exposed in client-side code in a real deployment.
+
+The app was also built and published live using **Lovable**, with the source code hosted on **GitHub**.
 
 ## Team Members
 
