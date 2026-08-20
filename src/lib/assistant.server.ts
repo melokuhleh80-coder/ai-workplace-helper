@@ -39,7 +39,7 @@ export async function runGenerateEmail(data: {
   context: string;
   tone: string;
   audience: string;
-  recipient?: string;
+  recipient?: string | undefined;
 }) {
   const provider = gateway();
   const recipient = data.recipient?.trim();
